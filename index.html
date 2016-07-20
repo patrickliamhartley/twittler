@@ -10,15 +10,22 @@
     <h6>WORLD'S GREATEST WEBSITE</h6>
   </heading>
   <body>
-
-
+    <div class="button">
+      <button>
+        CLICK HERE TO CHECK YOUR TWITTLS
+      </button>
+    </div>
   <section class="twitspace">
-    <p>ERROR TWITTLERS NOT SHOWING</p>
+    <p>WHY DONT YOU CHECK YOUR TWITTLS?</p>
+    <img src="smirk.png">
 
   </section>
+
+
     <script>
 
       $(document).ready(function(){
+        $("button").on("click", function (){
         var $body = $('.twitspace');
         $body.html('');
 
@@ -32,7 +39,7 @@
         }
 
       });
-
+    });
     </script>
   </body>
 </html>
