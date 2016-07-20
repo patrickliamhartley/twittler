@@ -85,3 +85,10 @@ heading h6{
 .twitspace img{
 	height: 400px;
 }
+.message{
+	font-size: 20px;
+}
+.time{
+	font-size: 15px;
+	color:grey;
+}
