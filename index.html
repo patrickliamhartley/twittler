@@ -15,33 +15,50 @@
         CLICK HERE TO CHECK YOUR TWITTLS
       </button>
     </div>
-  <section class="twitspace">
-    <p>WHY DONT YOU CHECK YOUR TWITTLS?</p>
-    <img src="smirk.png">
 
-  </section>
+    <section class="container">
+      <div class="twitspace">
+        <p>WHY DONT YOU CHECK YOUR TWITTLS?</p>
+        <img src="smirk.png">
+      </div>
+
+    </section>
 
 
     <script>
 
       $(document).ready(function(){
         $("button").on("click", function (){
-        var $body = $('.twitspace');
-        $body.html('');
+        var feed = $('.twitspace');
+        feed.html('');
 
         var index = streams.home.length - 1;
         while(index >= 0){
           var tweet = streams.home[index];
           var $tweet = $('<div class= "message"></div>');
           var date=$('<div class= "time"></div>');
+          var name=$('<div class= "username"></div>')
+          var space=$('<div class= "space"></div>')
           date.text('Created at:'+tweet.created_at)
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($body);
-          date.appendTo($body);
+          $tweet.text(tweet.message);
+          name.text('@'+tweet.user+ ': ' );
+          name.appendTo(feed);
+          $tweet.appendTo(feed);
+          date.appendTo(feed);
+          space.appendTo(feed);
+
           index -= 1;
         }
 
       });
+//username timelines
+     $(".username").on('click',function(){
+
+
+     });
+
+
+
     });
     </script>
   </body>

@@ -87,8 +87,20 @@ heading h6{
 }
 .message{
 	font-size: 20px;
+	text-align: center;
 }
 .time{
 	font-size: 15px;
 	color:grey;
+	text-align: right
+}
+.username{
+	text-align: left;
+}
+.username,.time,.message{
+	display: inline-block;
+}
+.space{
+	height:5px;
+	display: block;
 }
