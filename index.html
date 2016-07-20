@@ -12,7 +12,7 @@
   <body>
     <div class="button">
       <button>
-        CLICK HERE TO CHECK YOUR TWITTLS
+        CHECK YOUR TWITTLER FEED
       </button>
     </div>
 
@@ -41,6 +41,7 @@
           var space=$('<div class= "space"></div>')
           date.text('Created at:'+tweet.created_at)
           $tweet.text(tweet.message);
+          name.addClass(tweet.user);
           name.text('@'+tweet.user+ ': ' );
           name.appendTo(feed);
           $tweet.appendTo(feed);
@@ -50,15 +51,151 @@
           index -= 1;
         }
 
+//attempted function declaration. it didnt work so i'm scrapping it!
+/*
+var scriptingFunc=function(name){
+        var timelineFeed=$('.twitspace');
+          feed.html('');
+///wanted to take in a parameter and sub it in for the name value in this path below. tried a bunch of stuff, couldnt get it to work
+//feedback is appreciated!
+        var index = streams.users.name.length - 1;
+             while(index >= 0){
+              var tweet = streams.users.name[index];
+              var $tweet = $('<div class= "message"></div>');
+              var date=$('<div class= "time"></div>');
+              var name=$('<div class= "username"></div>')
+              var space=$('<div class= "space"></div>')
+              date.text('Created at:'+tweet.created_at)
+              $tweet.text(tweet.message);
+              name.addClass(tweet.user);
+              name.text('@'+tweet.user+ ': ' );
+              name.appendTo(feed);
+              $tweet.appendTo(feed);
+              date.appendTo(feed);
+              space.appendTo(feed);
+
+              index -= 1;
+            }
+      }
+*/    
+
+///for the record I know and hate that i had to have this similar block of code repeated, but i couldnt get my functions to pass on what I wanted. could use some help figuring out a better way to do this!
+        
+        $('.twitspace').on('click','.mracus',function (){
+
+          var timelineFeed=$('.twitspace');
+          feed.html('');
+          var header=$('<h2 class="swag"></h2>')
+          header.text("MRACUS' SWAGGY TWITTLS")
+          header.appendTo(feed);
+         
+          var index = streams.users.mracus.length - 1;
+             while(index >= 0){
+              var tweet = streams.users.mracus[index];
+              var $tweet = $('<div class= "message"></div>');
+              var date=$('<div class= "time"></div>');
+              var name=$('<div class= "username"></div>')
+              var space=$('<div class= "space"></div>')
+              date.text('Created at:'+tweet.created_at)
+              $tweet.text(tweet.message);
+              name.addClass(tweet.user);
+              name.text('@'+tweet.user+ ': ' );
+              name.appendTo(feed);
+              $tweet.appendTo(feed);
+              date.appendTo(feed);
+              space.appendTo(feed);
+              index -= 1;
+            }
+          });
+
+
+
+
+        $('.twitspace').on('click','.sharksforcheap',function (){
+
+          var timelineFeed=$('.twitspace');
+          feed.html('');
+          var header=$('<h2 class="swag"></h2>')
+          header.text("SHARKSFORCHEAPS' SWAGGY TWITTLS")
+          header.appendTo(feed);
+
+          var index = streams.users.sharksforcheap.length - 1;
+             while(index >= 0){
+              var tweet = streams.users.sharksforcheap[index];
+              var $tweet = $('<div class= "message"></div>');
+              var date=$('<div class= "time"></div>');
+              var name=$('<div class= "username"></div>')
+              var space=$('<div class= "space"></div>')
+              date.text('Created at:'+tweet.created_at)
+              $tweet.text(tweet.message);
+              name.addClass(tweet.user);
+              name.text('@'+tweet.user+ ': ' );
+              name.appendTo(feed);
+              $tweet.appendTo(feed);
+              date.appendTo(feed);
+              space.appendTo(feed);
+              index -= 1;
+            }
+          });
+
+
+
+        $('.twitspace').on('click','.shawndrost',function (){
+
+          var timelineFeed=$('.twitspace');
+          feed.html('');
+          var header=$('<h2 class="swag"></h2>')
+          header.text("SHAWNDROST'S SWAGGY TWITTLS")
+          header.appendTo(feed);
+
+          var index = streams.users.shawndrost.length - 1;
+             while(index >= 0){
+              var tweet = streams.users.shawndrost[index];
+              var $tweet = $('<div class= "message"></div>');
+              var date=$('<div class= "time"></div>');
+              var name=$('<div class= "username"></div>')
+              var space=$('<div class= "space"></div>')
+              date.text('Created at:'+tweet.created_at)
+              $tweet.text(tweet.message);
+              name.addClass(tweet.user);
+              name.text('@'+tweet.user+ ': ' );
+              name.appendTo(feed);
+              $tweet.appendTo(feed);
+              date.appendTo(feed);
+              space.appendTo(feed);
+              index -= 1;
+            }
+          });
+
+
+
+        $('.twitspace').on('click','.douglascalhoun',function (){
+
+          var timelineFeed=$('.twitspace');
+          feed.html('');
+          var header=$('<h2 class="swag"></h2>')
+          header.text("DOUGLASCALHOUN'S SWAGGY TWITTLS")
+          header.appendTo(feed);
+
+          var index = streams.users.douglascalhoun.length - 1;
+             while(index >= 0){
+              var tweet = streams.users.douglascalhoun[index];
+              var $tweet = $('<div class= "message"></div>');
+              var date=$('<div class= "time"></div>');
+              var name=$('<div class= "username"></div>')
+              var space=$('<div class= "space"></div>')
+              date.text('Created at:'+tweet.created_at)
+              $tweet.text(tweet.message);
+              name.addClass(tweet.user);
+              name.text('@'+tweet.user+ ': ' );
+              name.appendTo(feed);
+              $tweet.appendTo(feed);
+              date.appendTo(feed);
+              space.appendTo(feed);
+              index -= 1;
+            }
+          });
       });
-//username timelines
-     $(".username").on('click',function(){
-
-
-     });
-
-
-
     });
     </script>
   </body>
